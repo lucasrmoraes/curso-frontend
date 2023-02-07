@@ -24,10 +24,10 @@ git clone: https://github.com/lucasrmoraes/curso-frontend.git
 ## Commits
 Informação de alteração
     - após testado todo seu código
-    - cd "curso-frontend"/ <- cd, usado para acessar a pasta do diretório ->
-    - git add * <- Atualiza o diretorio do commite->
-    - git commit -m "" <- add um commit ->
-    - git push <- Atualiza minha página no git hub ->
+    - cd "curso-frontend"/ ( cd, usado para acessar a pasta do diretório )
+    - git add * ( Atualiza o diretorio do commite )
+    - git commit -m "" ( add um commit )
+    - git push ( Envia alterações para meu repositório )
 
 ## GitFlow
 Fluxo do Git
