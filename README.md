@@ -28,7 +28,8 @@ Informação de alteração
     - cd "curso-frontend"/ ( cd, usado para acessar a pasta do diretório )
     - git add * ( Atualiza o diretorio do commite )
     - git commit -m "" ( add um commit )
-    - git push ( Envia alterações para meu repositório )
+    - git push ( Envia alterações para repositório GitHub)
+    - git pull ( Puxar / trazer alterações do GitHub par sua máquina)
 
-## GitFlow
+## GitFlow 
 Fluxo do Git
