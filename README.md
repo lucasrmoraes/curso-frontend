@@ -23,7 +23,7 @@ git clone: https://github.com/lucasrmoraes/curso-frontend.git
 
 ## Commits
 
-###Informação de alteração
+Informação de alteração
     - após testado todo seu código
     - cd "curso-frontend"/ <- cd, usado para acessar a pasta do diretório ->
     - git add * <- Atualiza o diretorio do commite->
