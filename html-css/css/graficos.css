@@ -1,0 +1,73 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62,5%;
+}
+
+body{
+    font-size: 1.4rem;
+    color: #343;
+}
+
+footer {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+div {
+    margin: 40px auto;
+}
+
+/*Cria um Circulo*/
+#grafico-01 {
+    background-color: crimson;
+    width: 400px;
+    height: 400px;
+    overflow: hidden; 
+    border-radius:50%; /*Arrenda as bordas*/
+
+    /*hidden - esconde o conteudo caso passe do tamanho estabelecido.
+    scroll - se a area do conteudo ultrapassar a area da div, ele vai criar uma navegação dentro da div.*/
+}
+
+#grafico-01 img {
+    width: 100%;
+} /* img dentro do "id=grafico-01" ira respeitar as condições*/
+
+/*Cria um Triangulo*/
+#grafico-02 {
+    background: transparent; /* area do quadrado escondida*/
+    border-style: solid;
+    border-width: 60px 0 60px 120px;
+    border-color: transparent transparent transparent greenyellow;
+    width: 60px;
+}
+
+#imagem-vetorial {
+    width: 200px;
+}
+
+#canvas{
+    height: 200px;
+    width: 200px;
+}
+
+/*Filtros - Quase todos trabalham com porcentagem*/
+
+#grafico-01{
+    filter: drop-shadow(5px 10px 8px #333); /*sombra*/
+    max-width: 100%;
+    height: auto;
+}
+
+.filtro {
+    filter: grayscale(100%); /* escala de cinza */
+    filter: blur(5px); /* escala de foco - quanto maior o px maior sera o desfoque */
+    filter: brightness(40%);/* brilho (100% - normal) */
+    filter: invert(100%); /*filtro de inversão de cores - no 100% fica negativa */
+    filter: opacity(50%); /* opacidade da imagem ou elemento*/
+    filter: saturate(110%) sepia(70%); /* saturação da imagem - sepia (imagem dourada) - lembrando que para adicionar 2 filtros, apenas de o espaço*/
+}
+
+.filtro:hover {
+    filter: grayscale(0%);
+}

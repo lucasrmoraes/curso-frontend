@@ -19,6 +19,7 @@
 ## Criar conta no GitHub
 
 ## Clonar o projeto
+git clone: https://github.com/lucasrmoraes/curso-frontend.git
 
 ## Commits
 Informação de alteração

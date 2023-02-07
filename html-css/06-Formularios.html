@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>HTML - Formulário</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+
+		<header>
+			<h2>Curso Front-End</h2>
+		</header>
+
+		<section>
+			<nav>
+				<ul>
+					<li id="primeiro-link"><a href="./05-Layouts.html">Home</li></a>
+				</ul>
+
+				<ul>
+					<p>
+						<li><a href="#sobre">Sobre</li></a>
+						<li><a href="#contato">Contato</li></a><br>
+						<li><a href="./Homepage.html">Voltar</a></li>
+					</p>
+				</ul>
+			</nav>
+
+			<article>
+
+				<h1 id="primeiro-link">Contato</h1>
+				<p>Preencha os campos abaixo</p>
+
+				<form method="post"> <!-- formulario -->
+					
+					<div class="navegacao"> <!-- usado para agrupar e separar elementos-->
+
+						<label for="nome">Nome</label><br> <!-- rotulo -->
+						<input type="text" name="nome" id="nome" placeholder="Digite seu nome"> 
+						<!-- input - Entrada de Texto -->
+						<!-- placeholder - Pode ser usado em Atributos tipo texto -->
+
+					</div>
+					
+					<div class="navegacao">
+
+						<label for="email">E-mail</label><br>
+						<input type="email" name="email" id="email" placeholder="Digite seu email">
+					</div>
+					
+					<div class="navegacao">
+
+						<label for="mensagem">Mensagem</label><br>
+						<textarea name="mensagem" id="mensagem" rows="5"></textarea>
+					</div>
+
+					<div class="navegacao">
+						<p>
+							<label>Quais linguagens você prefere?</label>
+							<input type="radio" name="linguagens" value="html"> HTML
+							<input type="radio" name="linguagens" value="css"> CSS
+							<input type="radio" name="linguagens" value="javascript"> JavaScript
+							<input type="radio" name="linguagens" value="C#"> C#
+							<input type="radio" name="linguagens" value="python"> Python
+							<input type="radio" name="linguagens" value="java"> Java
+						<!-- type="radio" usado para seleção de uma opção -->
+						</p>
+					</div>
+
+					<div class="navegacao">
+						<p>
+							<label>Quais linguagens você sabe?</label>
+							<input type="checkbox" name="linguagens" value="html"> HTML
+							<input type="checkbox" name="linguagens" value="css"> CSS
+							<input type="checkbox" name="linguagens" value="javascript"> JavaScript
+							<input type="checkbox" name="linguagens" value="C#"> C#
+							<input type="checkbox" name="linguagens" value="python"> Python
+							<input type="checkbox" name="linguagens" value="java"> Java
+						<!-- type="checkbox" usado para seleção de várias opções -->
+						</p>
+
+					</div class="navegacao">
+
+					<div class="navegacao">
+						<p>
+							<label>Qual a sua cor favorita?</label>
+								<select>
+									<option value="azul">Azul</option>
+									<option value="vermelho">Vermelho</option>
+									<option value="amarelo">Amarelo</option>
+								</select>
+							<!-- select = lista de seleção -->
+						</p>
+					</div>
+						
+					
+					<div class="navegacao">
+						<input type="submit" type="text">
+					</div>
+
+				</form>
+				
+			</article>
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Lucas Moraes</p>
+		</footer>
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/graficos.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Elementos Gráficos</h1>
+    
+    <div id="grafico-01">
+        <img src="./imagens/cafe.jpg" alt="cafe">
+    </div> <!-- div - se adapta de tamanho do conteudo-->
+
+    <div id="grafico-02">
+        
+    </div>
+
+    <div id="imagem-vetorial">
+        <img src="./imagens/bank_irltusejv5ow.svg">
+    </div>
+
+    <div>
+        <canvas id="canvas"></canvas> <!--Cria uma tela de pintura pode criar graficos mais complexos, porem é usado mais com JS -->
+    </div>
+
+    <!-- Programação JS-->
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#00FF99";
+        ctx.fillRect(0, 0, 80, 80);
+    </script>
+</body>
+</html>

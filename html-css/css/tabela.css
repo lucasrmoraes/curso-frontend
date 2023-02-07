@@ -1,0 +1,74 @@
+/*	first-child - seleciona somente a primeira linha de cada coluna 
+	vertical-aligh - direciona onde ficara o texto seja topo, centralizado ou abaixo 
+	nth-child - pode determinar o numero da linha e aplicar uma regra especifica para ela 
+	nth-child (even) - para pegar todas as linhas pares
+	nth-child (odd) - para pegar todas as linhas impares*/
+
+table{
+
+	border: 5px solid;
+	background-color: #eeccff;
+	width: 100%;
+}
+
+table tr {
+	border: 1px solid #757575;
+}
+
+table tbody tr:nth-child(even){
+	background-color: #ccc;
+
+}
+
+table tbody tr:nth-child(1) {
+	font-weight: bold;
+}
+
+table tbody tr:hover {
+	background-color: rgba(0, 100, 150, 0.2);
+}
+
+
+
+table td, table th {
+	padding: 1rem;
+	font-size: 1.6rem;
+	text-align: right;
+	/* border: 1px solid #757575; */
+	vertical-align: middle;
+}
+
+table tr td:first-child {
+	text-align: left;
+	font-weight: bold;
+}
+
+table th {
+	background-color: #228b22;
+	color: #fffaf0;
+	font-weight: bold;
+	font-size: 1.6rem;
+	text-align: left;
+}
+
+.table-container{
+	padding: 4rem 1rem;
+}
+
+.table-container h3 {
+	font-size: 1.8rem;
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+
+.table-container tfoot td{
+	font-weight: bold;
+}
+
+.table-container tfoot {
+	background: #ffffff;
+}
+.table-container tbody tr:nth-child(1){
+	background-color: rgba(0, 0, 125, .5);
+	color: white;
+}

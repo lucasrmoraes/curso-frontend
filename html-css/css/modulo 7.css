@@ -1,0 +1,169 @@
+/* Importando CSS de Tabelas */
+
+/* 
+Sempre colocar importação no inicio do documento
+tag url - tbm funciona para importa arquivo
+ */
+@import url('tabela.css');
+
+
+
+/* 
+	Herança
+
+	1. Sobreposição / Sobreescreve
+	2. Aplica a última estilo definido
+	3. Prioriza estilo específicas ( com seletores mais próximos)
+*/
+
+html {
+	font-family: sans-serif;
+	color: #333333; 
+}
+
+p {
+	color: #454545;
+}
+
+header p{
+	color: #fff;
+	font-size: 1.5rem;
+
+}
+
+footer p{
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+/*
+	Combinadores
+
+	(espaço) seletor descendent
+	(>) combinador de seletores filhos
+	(+) combinador de elemntos irmãos adjacentes / que vem logo na sequencia
+	(~) combinador de elementos irmãos geral / após elemento de referência
+*/
+
+header h2 {
+	font-weight: 100;
+}
+
+header > h2{
+	font-weight: 600;
+}
+
+h2 + p {
+	background: #166;
+	color: whitesmoke;
+}
+
+h2 ~ h5 {
+	font-size: 1.2rem;
+}
+
+div ~ p {
+	text-transform: uppercase;
+}
+
+/* 
+	Pseudo-classes / Pseudo-elementos : *
+
+	hover: faz com que o comportamento mude ao passar o mouse em cima do link.
+*/
+
+a {
+	color: #b93fb1;
+	text-decoration: none; /* o padrão é underline*/
+	font-size: 1.8rem;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+a:visited {
+	background: #152;
+}
+a:active {
+	color: #666;
+}
+a:hover{
+	color: #02e2f9;
+	background: #eee;
+}
+h2:hover {
+	color: #02e2f9;
+}
+
+/* 
+	Tipografia - própria para textos 
+	
+	bold - negrito
+
+	letter-spacing - espaçamento entre minhas listas, fontes ou textos.
+
+	line-height - espaço que estará ocupando.
+*/
+
+html{
+	font-family: Times New Roman;
+}
+
+h1, h2 {
+	font-weight: bold;
+	font-family: 'Playfair Display', serif;
+}
+
+p, li {
+	font-weight: normal;
+	font-size: 1.4rem;
+}
+
+li {
+	letter-spacing: 0.05rem;
+	font-family: sans-serif;
+	line-height: 1.5;
+	padding-left: 0.75rem;
+}
+h1 {
+	font: italic bold  1.2rem/2 sans-serif; /* fazendo aplicação comando "font"  apenas, posso descrever quais as caracteristicas*/
+}
+
+/* Cores */
+
+p {
+	color: blue;
+	color: #034589;
+}
+
+/* Inserção de imagens de fundo */
+
+body {
+	background: url(../imagens/abstratos-arte-digital-roxos-imagem-de-fundo.jpg) center top no-repeat #000111;
+}
+
+section {
+	background: rgba(255, 255, 255, 0.75);
+}
+
+
+/* Definindo caracteristicas da Classe */
+
+.layout{
+	padding: 1.5rem;
+}
+
+.navegacao{
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: .5rem;
+}
+
+.navegacao li a{
+	color: white;
+	font-size: 1.5rem;
+}
+
+.navegacao li a:hover{
+	background-color: rgba(150, 150, 200, .5);
+	color: #333333;
+}
