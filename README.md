@@ -32,7 +32,7 @@ Informação de alteração
 - git commit -m "" ( add um commit )
 - git push ( Envia alterações para repositório GitHub)
 - git pull ( Puxar / trazer alterações do GitHub par sua máquina)
-- git checkout -b (cria uma branch nova)
+
 - git fetch --all (Verifica se não tem uma versão nova na minha branch master que possa interferir na que estou desenvolvendo)
 
 ## GitFlow 
@@ -46,6 +46,9 @@ São ramificações / versões paralelas (Bastante utiliza quando se está traba
 - develop (desenvolvimento, gitalterações, versões de teste - Após todas as operações subimos o(s) arquivo(s) para o master)
 - DOD Definition of Done: critérios de aceite
 - versionamento 1.0.0
+
+- git checkout -b dev (cria uma branch nova)
+- git checkout master / main (muda de branch)
 
 ### Merge
 Mescla de branchs
