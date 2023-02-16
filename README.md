@@ -3,6 +3,7 @@
 
 # GIT
 ## versionamento
+
     - Histórico
     - Controle de versão
     - Quem alterou
@@ -19,6 +20,7 @@
 ## Criar conta no GitHub
 
 ## Clonar o projeto
+
 git clone: https://github.com/lucasrmoraes/curso-frontend.git
 
 ## Commits
@@ -38,9 +40,11 @@ Informação de alteração
 - touch .gitignore (cria um arquivo)
 
 ## GitFlow 
+
 Fluxo do Git
 
 ### Branchs
+
 São ramificações / versões paralelas (Bastante utiliza quando se está trabalhando em equipe)
 
 - main / master (quando o projeto é publicado)
@@ -59,16 +63,17 @@ São ramificações / versões paralelas (Bastante utiliza quando se está traba
 - git branch (Confere as branch que foram criadas)
 
 ### Merge
-Mescla de branchs
-Voçê pode precisar resolver conflitos manualmente
+
+- Mescla de branchs
+- Voçê pode precisar resolver conflitos manualmente
 
 - git merge main (mescla)
 
 ### Pull Requests
 
-Mescla de branchs no repoositório
-Permite code review
-O repositório resolve os conflitos automaticamente
+- Mescla de branchs no repoositório
+- Permite code review
+- O repositório resolve os conflitos automaticamente
 
 ### configura  GitFlow
 
