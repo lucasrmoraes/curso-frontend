@@ -135,3 +135,11 @@ footer small {
     font-size: 80%;
     display: block;
 }
+
+.cog-abuse.cog-wrapper {
+    visibility: hidden !important;
+}
+
+.cog-brandingcog-branding--minimal{
+    visibility: hidden !important;
+}
