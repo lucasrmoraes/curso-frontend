@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProntoCloud - Newsletter</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        
+        html {
+            font-size: 62.5%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+        }
+
+        @media (max-width:"600px") {
+            table {
+               max-width:100% !important;
+               min-width: 320px;
+            } 
+            h1 {
+                font-size: 1rem;
+            }
+         }
+
     </style>
 </head>
 
@@ -31,9 +57,9 @@
             <div>
                 <td style="width: 15px;"></td>
                 <td>
-                <h1 style=" color: rgb(1, 69, 109)">Aprenda a criar o site de seu negócio</h1>
+                <h1 style=" color: rgb(1, 69, 109); padding:0.6rem" >Aprenda a criar o site de seu negócio</h1>
 
-                <a href="#"><img style="border: 0; display: block; margin-bottom: 12px;" src="https://prontocloud.com.br/wp-content/uploads/2015/11/manutencao-de-sites-700x300.jpg" alt="Aprenda a criar o site de seu negócio"></a>
+                <a href="#"><img style="border: 0; display: block; margin-bottom: 12px;" src="https://prontocloud.com.br/wp-content/uploads/2015/11/manutencao-de-sites-700x300.jpg" alt="Aprenda a criar o site de seu negócio; padding:0.6rem"></a>
                 <h2 style="color: rgb(1, 69, 109);">Tudo o que você precisa saber:</h2>
 
                 <p style="display: block; border: 1; text-align: justify; margin: 10px; padding: 2px;">Você provavelmente está lendo aqui por que está pensando em fazer um novo site, se é a primeira vez muitas dúvidas podem surgir, e caso isso aconteça, pode entrar em contato com a gente. Mas antes pode avaliar cada etapa do nosso passo-a-passo:</p>
@@ -53,7 +79,7 @@
             <td colspan="3">
                 <span style= "background-color: rgb(1, 69, 109);  display: block; padding: 5px 12px; margin: 0 auto; text-align: center; width: 300px; height: 20px; border-radius: 10px; margin-bottom: 10px;">
 
-                <a style="font-size: 1.2rem; text-decoration: none; color: white;" href="#">Conheça nossas soluções</a>
+                <a style="font-size: 1.2rem; text-decoration: none; color: white;" href="./index.html">Conheça nossas soluções</a>
             
                 </span>
                 <!-- A aplicação do css diretamente no HTML, pode não ficar semantico, porem é o que facilita no email makerting-->

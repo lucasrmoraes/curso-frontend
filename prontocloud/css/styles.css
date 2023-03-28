@@ -84,6 +84,7 @@ ol li {
     font-size: 1.4rem;
     color: #454545;
     padding-bottom: 5px;
+    text-align: justify;
 }
 
 section {
@@ -168,4 +169,13 @@ footer small {
 #tenho-interesse 
 .cog-form__content {
     background-color: #b8c8d6;
+}
+
+@media (max-width: 425px) {
+    section nav {
+        width: 90%;
+    }
+    section {
+        width: 100%;
+    }
 }
