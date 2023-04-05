@@ -18,7 +18,6 @@ body {
 .container {
     display: block;
     float: left;
-    padding: 10px;
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
@@ -96,6 +95,18 @@ section {
     width: 100%;
 }
 
+article {
+    display: block;
+    float: left;
+    padding: 5px;
+}
+
+nav {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
 section nav {
     background-color: rgb(1, 69, 109);
     display: block;
@@ -127,7 +138,6 @@ section article {
     display: block;
     float: left;
     width: 78%;
-    padding: 10px;
 }
 
 footer {
@@ -169,6 +179,28 @@ footer small {
 #tenho-interesse 
 .cog-form__content {
     background-color: #b8c8d6;
+}
+
+@media (min-width: 1440px){
+
+    #tenho-interesse article {
+    margin-left: 315px;
+    }
+
+}
+@media (max-width: 1200px) {
+    section nav {
+        width: 90%;
+    }
+    section {
+        width: 100%;
+    }
+    nav ul{
+        text-align: center;
+    }
+    .container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 425px) {
