@@ -8,27 +8,27 @@
 - % resto de divisão
 
 ## Comparadores matemáticos: teste lógico, retorno booleano (true / false)
-<   menor que
->   maior que
-<=  menor ou igual
->=  maior ou igual
+- <   menor que
+- >   maior que
+- <=  menor ou igual
+- >=  maior ou igual
 
 ## Comparadores Lógicos: testelógico, retorno booleano (true / false)
 
-==      igualdade entre sentenças (valor)
-!=      diferença entre sentenças (valor) <!-- O ponto de '!' é como se tivesse negando-->
-===     igualdade entre sentenças (valor e tipo)
-!==     diferena entre sentenças (valor e tipo)
-=       atribuição <!-- Quando recebe um valor ou um caracter, usando o "" o computador entende como string -->
-typeof  teste de variável
+- ==      igualdade entre sentenças (valor)
+- !=      diferença entre sentenças (valor) <!-- O ponto de '!' é como se tivesse negando-->
+- ===     igualdade entre sentenças (valor e tipo)
+- !==     diferena entre sentenças (valor e tipo)
+- =       atribuição <!-- Quando recebe um valor ou um caracter, usando o "" o computador entende como string -->
+- typeof  teste de variável
 
-a == b - true
-a != b - false
+- a == b - true
+- a != b - false
 
 * Atribuição <!-- '=' Declara a variável ou atribui um valor a ela -->
-b = 4
-a = b
-a = 4
+- b = 4
+- a = b
+- a = 4
 
 ## Operadores de lógica e junção lógica
 - !     NÂO (NOT) <!-- Nega a sentença-->
