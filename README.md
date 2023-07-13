@@ -37,6 +37,8 @@ Informação de alteração
 
 - git fetch --all (Verifica se não tem uma versão nova na minha branch master que possa interferir na que estou desenvolvendo)
 
+- git rm (deleta os arquivos do git)
+
 - touch .gitignore (cria um arquivo)
 
 ## GitFlow 
