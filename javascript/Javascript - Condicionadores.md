@@ -214,7 +214,7 @@ function calcularMedia(notas) {
 
 
     media = soma / notas.length; 
-// Ficou um cálculo dinâmico, porque independente da quantidade de notas ela apresenta na tela
+<!--Ficou um cálculo dinâmico, porque independente da quantidade de notas ela apresenta na tela-->
 
     return media;
 }
