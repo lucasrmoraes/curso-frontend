@@ -76,13 +76,23 @@ Seleciona o objeto e disponibiliza (métodos / função).callback
 - parentNode.appendChild(node) // html.appendChild('body')
 - element.innerHTML
 - element.style
-- element.setAttribute() // setar (inserir, definir)
-- element.getAttribute() // trazer (buscar)
+- element.setAttribute('name') // setar (inserir, definir)
+- element.getAttribute('name') // trazer (buscar)
 - element.addEventListener()
 - window.location // URL página
 - window.onload (en-US) // Controlar funções
 - console.log() // Exibir funções console (tela)
-- window.scrollTo() // Função
+- window.scrollTo(x, y) // Função
+
+## Seletores
+
+- Tipos de seletores: Tag, ID, Class, Name, Query
+- Callback
+- getElementById()
+- getElementByTagName()
+- getElementByName()
+- getElementByClassName()
+- querySelectorAll() // #id | .class
 
 #### Referências
 
