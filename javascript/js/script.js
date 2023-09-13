@@ -25,37 +25,43 @@ function aprovacao ( notas ){
 
 /* Formulário envio de dados para cálculo da média */
 
-document.getElementById('formulario-01').addEventListener('submit', function(evento){
+// O erro constando no exercicio do formulario1, se deu por não estar presente. Por isso foi criado uma const junto com uma condição para que o erro não persista.
 
-    evento.preventDefault();
-    evento.stopPropagation();
+const formulario1 = document.getElementById('formulario-1')
 
-    if (this.getAttribute('class').match(/erro/)){
-        return false;
-    }
+if (formulario1)
+    formulario1.addEventListener('submit', function(evento){
 
-    let dados = new FormData(this); // Captando dados do formulário, utilizando método FormData
+        evento.preventDefault();
+        evento.stopPropagation();
 
-    let notas = [];
-
-    for (let key of dados.keys()) { // Laço criado para capturar os dados deste objeto
-
-        let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0; // number - é um numero casa decimal
-
-        if(!isNaN(numero)) {
-            notas.push(numero);
+        if (this.getAttribute('class').match(/erro/)){
+            return false;
         }
-        
-    }
 
-    console.log(notas); // Finalidade do console.log é para vermos o que está ocorrendo por de baixo dos panos
+        let dados = new FormData(this); // Captando dados do formulário, utilizando método FormData
 
-    texto = aprovacao(notas)
+        let notas = [];
 
-    document.getElementById('resultado').innerHTML = aprovacao(notas);
-    aprovacao(notas);
+        for (let key of dados.keys()) { // Laço criado para capturar os dados deste objeto
 
-});
+            let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0; // number - é um numero casa decimal
+
+            if(!isNaN(numero)) {
+                notas.push(numero);
+            }
+            
+        }
+
+        console.log(notas); // Finalidade do console.log é para vermos o que está ocorrendo por de baixo dos panos
+
+        texto = aprovacao(notas)
+
+        document.getElementById('resultado').innerHTML = aprovacao(notas);
+        aprovacao(notas);
+
+    });
+
 
 function validaCampo(elemento){
     
@@ -89,9 +95,14 @@ function validaCampoNumerico(elemento){
 
         console.log(this.value);
 
+       // Criamos uma variavel que recebe this.value, assim não precisamos repetir. O código abaixo verifica se é um numero, faz a verificação do CEP sem o '-'.
+
+       let numero = this.value.match(/^[\d]5-[/d]-3/) ? this.value.replace(/-/, "") : this.value; 
+       
+       
         // Está informando ao usuario quando campo está vazio ou não foi preenchido!! Aparece a mensagem a seguir.
 
-        if(this.value != "" && this.value.match(/[0-9]*/) && this.value >= 0 && this.value <= 10) {
+        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 9) {
             document.querySelector(".mensagem").innerHTML = '';
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
@@ -111,8 +122,67 @@ function validaCampoNumerico(elemento){
 }
 
 
-let  camposObrigatorios = document.querySelectorAll('input.obrigatorio');
-let  camposNumericos = document.querySelectorAll('input.numero');
+function validaEmail(elemento){
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        // O primeiro campo verifica a condição solicitada seguido pelo '@' e logo após a segunda condição e finalizando com '.' e terceira condição.
+
+        // i - ignora se é fonte maiuscula ou minuscula.
+
+        const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]/i;
+
+        if (this.value.match(emailValido)) {
+
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+
+        } else {
+
+            document.querySelector(".mensagem").innerHTML = 'Verifique o campo em destaque'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+
+            return false;
+        }
+    });
+}
+
+function validaUf(elemento) {
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        // const siglas [] = {AC,AL,AM,AP,BA,CE,ES,GO,MA,MG,MS,MT,PA,PB,PE,PI,PR,RJ,RN,RO,RR,RS,SC,SE,SP,TO};
+
+        const ufValido = /^[a-zA-Z]/i;
+
+        if (this.value.match(ufValido)) {
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+
+        } else {
+
+            document.querySelector(".mensagem").innerHTML = 'Verifique o campo em destaque'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+
+            return false;
+        }
+
+    });
+}
+
+
+let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+let camposNumericos = document.querySelectorAll('input.numero');
+let camposEmail = document.querySelectorAll('input.email');
+let camposUf = document.querySelectorAll('input.uf');
 
 
 for( let emFoco of camposObrigatorios) {
@@ -121,6 +191,14 @@ for( let emFoco of camposObrigatorios) {
 
 for( let emFoco of camposNumericos) {
     validaCampoNumerico(emFoco);
+}
+
+for (let emFoco of camposEmail) {
+    validaEmail(emFoco);
+}
+
+for (let emFoco of camposUf) {
+    validaUf(emFoco);
 }
 
 // parseInt - para o programa entender que são numeros inteiros
