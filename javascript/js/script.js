@@ -23,49 +23,188 @@ function aprovacao ( notas ){
 
 }
 
-// Função Recursivas
+/* Formulário envio de dados para cálculo da média */
 
-function contagemRegressiva( numero ) {
+// O erro constando no exercicio do formulario1, se deu por não estar presente. Por isso foi criado uma const junto com uma condição para que o erro não persista.
 
-    console.log( numero );
+const formulario1 = document.getElementById('formulario-1')
+
+if (formulario1)
+    formulario1.addEventListener('submit', function(evento){
+
+        evento.preventDefault();
+        evento.stopPropagation();
+
+        if (this.getAttribute('class').match(/erro/)){
+            return false;
+        }
+
+        let dados = new FormData(this); // Captando dados do formulário, utilizando método FormData
+
+        let notas = [];
+
+        for (let key of dados.keys()) { // Laço criado para capturar os dados deste objeto
+
+            let numero = dados.get(key).match(/\d*/) ? Number(dados.get(key)) : 0; // number - é um numero casa decimal
+
+            if(!isNaN(numero)) {
+                notas.push(numero);
+            }
+            
+        }
+
+        console.log(notas); // Finalidade do console.log é para vermos o que está ocorrendo por de baixo dos panos
+
+        texto = aprovacao(notas)
+
+        document.getElementById('resultado').innerHTML = aprovacao(notas);
+        aprovacao(notas);
+
+    });
+
+
+function validaCampo(elemento){
     
-    let proximoNumero = numero - 1;
+    elemento.addEventListener('focusout', function (event) {
 
-    if(proximoNumero > 0)
+        event.preventDefault();
 
-    contagemRegressiva(proximoNumero); // 9
+        // Está informando ao usuario quando campo está vazio ou não foi preenchido!! Aparece a mensagem a seguir.
 
+        if(this.value == '') {
+            document.querySelector(".mensagem").innerHTML = 'Verifique o preenchimento em vermelho'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+            return false;
+
+        } else {
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+
+        }
+
+        });
 }
 
-contagemRegressiva(10); // ideia da principal é reaproveitar uma função dentro de outra função
+function validaCampoNumerico(elemento){
+    
+    elemento.addEventListener('focusout', function (event) {
+
+        event.preventDefault();
+
+        console.log(this.value);
+
+       // Criamos uma variavel que recebe this.value, assim não precisamos repetir. O código abaixo verifica se é um numero, faz a verificação do CEP sem o '-'.
+
+       let numero = this.value.match(/^[\d]5-[/d]-3/) ? this.value.replace(/-/, "") : this.value; 
+       
+       
+        // Está informando ao usuario quando campo está vazio ou não foi preenchido!! Aparece a mensagem a seguir.
+
+        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 9) {
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+
+        
+        // Se o valor do if for >= 0 e o campo não for preenchido, entende que é = '0'. Assim ele não dá a msg de erro.
+
+        } else {
+            document.querySelector(".mensagem").innerHTML = 'Verifique o preenchimento em vermelho'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+
+            return false;
+        }
+
+        });
+}
 
 
-document.addEventListener('submit', function(evento){
+function validaEmail(elemento){
 
-    evento.preventDefault();
-    evento.stopPropagation();
+    elemento.addEventListener('focusout', function(event) {
 
-    let formulario = document.getElementById('formulario-01'); // recebendo formuçario-01 (valores) e chamando o documento lá na estrutura do HTML
+        event.preventDefault();
 
-    let dados = new FormData(formulario); // Captando dados do formulário, utilizando método FormData
+        // O primeiro campo verifica a condição solicitada seguido pelo '@' e logo após a segunda condição e finalizando com '.' e terceira condição.
 
-    let objeto = {}; // Tipo de váriavel, recebe vários valores e consegue add várias caracteristicas a este objeto
+        // i - ignora se é fonte maiuscula ou minuscula.
 
-    let notas = [];
+        const emailValido = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]/i;
 
-    for (let key of dados.keys()) { // Laço criado para capturar os dados deste objeto
-        objeto[key] = dados.get(key);
+        if (this.value.match(emailValido)) {
 
-        // adicona itens no array
-        notas.push(parseInt(dados.get(key))); 
-        // parseInt para o programa entender que são numeros inteiros
-    }
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
 
-    console.log(notas); // Finalidade do console.log é para vermos o que está ocorrendo por de baixo dos panos
+        } else {
 
-    console.log(objeto);
+            document.querySelector(".mensagem").innerHTML = 'Verifique o campo em destaque'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
 
-    document.getElementById('resultado').innerHTML = aprovacao(notas);
-    aprovacao(notas);
+            return false;
+        }
+    });
+}
 
-});
+function validaUf(elemento) {
+
+    elemento.addEventListener('focusout', function(event) {
+
+        event.preventDefault();
+
+        // const siglas [] = {AC,AL,AM,AP,BA,CE,ES,GO,MA,MG,MS,MT,PA,PB,PE,PI,PR,RJ,RN,RO,RR,RS,SC,SE,SP,TO};
+
+        const ufValido = /^[a-zA-Z]/i;
+
+        if (this.value.match(ufValido)) {
+            document.querySelector(".mensagem").innerHTML = '';
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+
+        } else {
+
+            document.querySelector(".mensagem").innerHTML = 'Verifique o campo em destaque'
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+
+            return false;
+        }
+
+    });
+}
+
+
+let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
+let camposNumericos = document.querySelectorAll('input.numero');
+let camposEmail = document.querySelectorAll('input.email');
+let camposUf = document.querySelectorAll('input.uf');
+
+
+for( let emFoco of camposObrigatorios) {
+    validaCampo(emFoco);
+}
+
+for( let emFoco of camposNumericos) {
+    validaCampoNumerico(emFoco);
+}
+
+for (let emFoco of camposEmail) {
+    validaEmail(emFoco);
+}
+
+for (let emFoco of camposUf) {
+    validaUf(emFoco);
+}
+
+// parseInt - para o programa entender que são numeros inteiros
+// parseFloat - numero flutante
+// !isNaN verifica se é realmente  um numero - quando o js tenta converter uma string por numero
+// .match - retorna uma correspondência entre uma string com uma expressão regular
+// focus quando o usuario clica no campo
+
+// Obs: Neste formulário precisaria fazer um bloqueio, para não permitir o envio sem o preenchimento de todos os dados!!!
