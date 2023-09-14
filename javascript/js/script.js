@@ -157,11 +157,14 @@ function validaUf(elemento) {
 
         event.preventDefault();
 
-        // const siglas [] = {AC,AL,AM,AP,BA,CE,ES,GO,MA,MG,MS,MT,PA,PB,PE,PI,PR,RJ,RN,RO,RR,RS,SC,SE,SP,TO};
+        const siglas = [
+            'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'ES', 'GO', 'MA', 'MG',
+            'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO',
+            'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
+        
+        const ufValido = siglas.prototype.find(); // Não estou conseguindo puxar os dados da array durante o preenchimento do formulário
 
-        const ufValido = /^[a-zA-Z]/i;
-
-        if (this.value.match(ufValido)) {
+        if (ufValido = /^[a-zA-Z]/i) {
             document.querySelector(".mensagem").innerHTML = '';
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
