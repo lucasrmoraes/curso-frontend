@@ -167,6 +167,7 @@ function validaUf(elemento) {
         const ufValido = siglas.find((uf) => uf  === elemento.value); 
         
         if (ufValido) {
+
             document.querySelector(".mensagem").innerHTML = '';
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
