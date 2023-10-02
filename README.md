@@ -81,3 +81,15 @@ São ramificações / versões paralelas <!-- Bastante utiliza quando se está t
 
 - git flow init <!-- roda uma configuração de como vai trabalhar com branchs diferentes)
 - git flow feature start {nome-da-feature}
+- git flow init (roda uma configuração de como vai trabalhar com branchs diferentes)
+- git flow feature start {nome-da-feature}
+
+### URL
+
+Uniform Resource Locator
+
+- URL amigável: serve para humanos e mecanismos indústrias
+
+- URL não-amigavel: https://abre.ai/f9Xs
+- URL amigavel: https://www.speedtest.net/pt
+
