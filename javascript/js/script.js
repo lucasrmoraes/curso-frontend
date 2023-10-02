@@ -102,7 +102,7 @@ function validaCampoNumerico(elemento){
        
         // Está informando ao usuario quando campo está vazio ou não foi preenchido!! Aparece a mensagem a seguir.
 
-        if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 9) {
+        if(numero != "") {
             document.querySelector(".mensagem").innerHTML = '';
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
@@ -161,10 +161,13 @@ function validaUf(elemento) {
             'AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'ES', 'GO', 'MA', 'MG',
             'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO',
             'RR', 'RS', 'SC', 'SE', 'SP', 'TO'];
-        
-        const ufValido = siglas.prototype.find(); // Não estou conseguindo puxar os dados da array durante o preenchimento do formulário
 
-        if (ufValido = /^[a-zA-Z]/i) {
+        // comando find - retorna o valor do meu elemento ou seja, de acordo com o preenchimento no campo ele confere com meu Array criado
+        
+        const ufValido = siglas.find((uf) => uf  === elemento.value); 
+        
+        if (ufValido) {
+
             document.querySelector(".mensagem").innerHTML = '';
             this.classList.remove('erro');
             this.parentNode.classList.remove('erro');
