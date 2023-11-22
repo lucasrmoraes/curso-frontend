@@ -1,0 +1,21 @@
+
+section {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+input,
+textarea {
+    margin-bottom: 1rem;
+}
+
+.card {
+    width: 32%;
+    float: left;
+    margin: 2.5px;
+}
+
+.modal-1 {
+    width: auto;
+    margin: 1rem;
+}
