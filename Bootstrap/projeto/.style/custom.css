@@ -1,7 +1,28 @@
 
+header {
+    background-color: #38b8f5;
+    width: auto;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 62,5%;
+}
+
+body {
+    background-color: #d2d3d4;
+}
+
 section {
     padding-bottom: 2rem;
     padding-top: 2rem;
+}
+
+.container {
+    margin: auto;
+    padding: 0.5rem;
+}
+
+
+.nav-link {
+    color: white;
 }
 
 input,
@@ -15,7 +36,14 @@ textarea {
     margin: 2.5px;
 }
 
-.modal-1 {
+.modal-1,
+.modal-2,
+.modal-3 {
     width: auto;
     margin: 1rem;
+}
+
+p {
+    text-align: justify;
+    width: auto;
 }
