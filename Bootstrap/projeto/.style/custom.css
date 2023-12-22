@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 header {
     background-color: #38b8f5;
@@ -11,8 +14,8 @@ body {
 }
 
 section {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1.2rem;
 }
 
 .container {
@@ -43,7 +46,17 @@ textarea {
     margin: 1rem;
 }
 
+.modal-footer {
+    background: #38b8f5;
+}
+
 p {
     text-align: justify;
     width: auto;
+    line-height: 1.8rem;
+}
+
+#descricao {
+    padding: 0.5rem;
+    
 }

@@ -21,6 +21,7 @@ body {
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
+    padding-bottom: 1rem;
 }
 
 header {    
@@ -28,8 +29,8 @@ header {
     display: block;
     float: left;
     width: 100%;
-    padding: 10px;
     border-bottom: 2px solid rgb(1, 69, 109);
+    padding: 1.6rem 0 1.6rem;
 }
 
 h1 {
@@ -67,11 +68,17 @@ p {
 img {
     max-width: 100%;
     height: auto;
+    padding-left: 2rem;
 }
 
 #tenho-interesse {
     background-color: rgb(87, 166, 231);
     width: 100%;
+}
+
+#tenho-interesse h1,
+#tenho-interesse p {
+    padding-left: 20px;
 }
 
 ol {
@@ -90,8 +97,7 @@ section {
     background-color: white;
     display: block;
     float: left;
-    font-size: 1.5rem; /* equivalente a 15px - lembrando que esta seguindo relativamente tamanho apadrão da página*/
-    padding: 10px;    
+    font-size: 1.5rem; /* equivalente a 15px - lembrando que esta seguindo relativamente tamanho apadrão da página*/   
     width: 100%;
 }
 
@@ -144,7 +150,6 @@ footer {
     background-color:rgb(1, 69, 109);
     display: block;
     float: left;
-    padding: 10px;
     width: 100%;
 }
 
@@ -174,6 +179,7 @@ footer small {
 #tenho-interesse {
     background-color: #b8c8d6;
     width: 100%;
+    padding-top: 1.6rem;
 }
 
 #tenho-interesse 
@@ -181,13 +187,13 @@ footer small {
     background-color: #b8c8d6;
 }
 
-@media (min-width: 1440px){
+/* @media (min-width: 1440px){
 
     #tenho-interesse article {
     margin-left: 315px;
-    }
+    }*/
 
-}
+
 @media (max-width: 1200px) {
     section nav {
         width: 90%;
@@ -210,4 +216,92 @@ footer small {
     section {
         width: 100%;
     }
+}
+
+#banner {
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /*cover - cobre toda a area da class*/
+    width: 100%;
+    height: 45vh; /*usando medida relativa*/
+    padding: 1.4rem 0 1.4rem;
+}
+
+.legenda-container {
+    float: right;
+    margin: 12vh 10vh 0 0;
+    width: 25vw;
+}
+
+.legenda {   
+    background-color: rgba(255, 255, 255, .4);
+    padding: 15px;
+    border-radius: 40px;
+    margin-bottom: 1.6rem;
+}
+
+.legenda h5, 
+.legenda h4 {
+    color: #254159;
+    text-align: center;
+    line-height: 1.2; /*espaçamento entre linhas*/
+}
+
+.button-cta {
+    border-radius: 30px;
+    display: inline;
+    background-color: orangered;
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: uppercase; /*coloca o texto em maiusculo ou minusculo*/
+    box-shadow: 2px 2px 2px black;
+    padding: 10px 15px;
+    width: auto;
+    text-decoration: none; /*remove o sublinhado do link*/
+    font-weight: 300;
+    float: right;
+}
+
+#saiba-mais {
+    background-color: #e0e0e0;
+    padding: 25px 0;
+}
+
+#saiba-mais p,
+#saiba-mais img {
+    width: 45%;
+    display: block;
+    float: left;
+}
+
+#saiba-mais p {
+    text-align: justify;
+    margin-top: 3rem;
+    float: right;
+}
+
+#saiba-mais h1 {
+    padding-left: 2rem;
+}
+
+dl {
+    margin: 20px 0;
+    display: block;
+}
+
+dt{
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.quest {
+    background-color: #cecece;
 }
