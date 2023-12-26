@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=".style/custom.css">
+  
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <h1>Logo</h1>
+
+                    
+                </div>
+
+                <div class="col">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+
+                    </ul>
+                </div>
+        </div>
+    </header>
+    
+    <section id="sobre">
+
+        <div class="container">
+            <div class="row"><!-- row- linha -->
+                <div class="col-md-8 col-sm-12"><!-- col- coluna-->
+
+                    <h2>Sobre Nós</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <a class="btn btn-lg btn-success">Botão</a>
+
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <img src="./images/pexels-athena-2582937.jpg" alt="Imagem Exemplo" class="img-fluid">
+                </div>               
+            </div>
+        </div>
+
+    </section>
+
+    <section id="produtos">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <h2>Produtos</h2>
+
+                    <div class="card"> <!-- serve para estruturar itens como se fosse de loja virtual -->
+                        <img src="./images/pexels-luis-gomes-546819.jpg" alt="Imagem Exemplo" class="img-fluid">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Lore, Ipsum</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <a class="btn btn-primary" data-ds-toggle="modal" data-ds-target="#modal-1">ver produto</a>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- serve para estruturar itens como se fosse de loja virtual -->
+                        <img src="./images/pexels-luis-gomes-546819.jpg" alt="Imagem Exemplo" class="img-fluid">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Lore, Ipsum</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <a class="btn btn-primary" href="#produto-2">ver produto</a>
+                        </div>
+                    </div>
+
+                    <div class="card"> <!-- serve para estruturar itens como se fosse de loja virtual -->
+                        <img src="./images/pexels-luis-gomes-546819.jpg" alt="Imagem Exemplo" class="img-fluid">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Lore, Ipsum</h5>
+                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                            <a class="btn btn-primary" href="#produto-3">ver produto</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6 col-sm-12">
+                    <h2>Contato</h2>
+                    <p>Ficou interessado? Preencha os campos do fofrmuário para receber uma cotação.</p>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="form">
+
+                        <div class="input-group"> <!-- form-control = estilo a pagina-->
+                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="form-control" type="text" name="email" placeholder="digite seu email">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea class="form-control" name=""  rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="bt btn-lg btn-success">Solicitar Cotação</button>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modals - Interação a mais na página ou seja, quando clicar em um produto ou item possibilita ver mais informações sem ter a necessidade de sair da página ou recarrega-lá -->
+
+    <div class="" id="modal-1"><!--class fade - dar um efeito de entrada na página (obs: pode ficar ocultado) -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header"> <!-- Cabeçalho - (data-ds-dismiss - o BootStrap entende que deve fechar o modal) -->
+                    <h5 class="modal-title">Produto-1</h5>
+                    <button class="btn-close" data-ds-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body"><!-- Corpo -->
+                    <h6>Confira o Tamanho e os preços</h6>
+
+                    <table class="table table-hover table-striped"><!-- Tabela - (table-hover: destaca quando passado o mouse em cima - table-striped: destaca as linhas da tabela de modo zebrado) -->
+
+                        <thead>
+                            <tr> <!-- Coluna -->
+                                <th>Tamanho</th>
+                                <th>Valor</th>
+                            </tr>   
+                        </thead>
+                        
+                        <tbody>
+                            <tr><!-- Linhas -->
+                                <td>P</td>
+                                <td>R$ 150</td>
+                            </tr>
+
+                            <tr>
+                                <td>M</td>
+                                <td>R$ 300</td>
+                            </tr>
+
+                            <tr>
+                                <td>G</td>
+                                <td>R$ 400</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-ds-dismiss="modal">Close</button>
+                </div>
+
+=======
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Coluna 1 </h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <a class="btn btn-lg btn-success">Botão</a>
+            </div>
+            <div class="col">
+                <h2>Coluna 2</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <a class="btn btn-small btn-danger">Botão</a>
+
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
