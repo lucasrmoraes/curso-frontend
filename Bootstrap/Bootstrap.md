@@ -73,3 +73,16 @@
         .botao:visited { ... }
 
     </style>
+
+...
+
+## Componentes
+
+- Blocos / Modelos / Templates reutilizáveis
+https://getbootstrap.com/docs/5.3/components
+
+## Helpers
+
+- Funções básicas
+- Incrementos
+- Ajustes

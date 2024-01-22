@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style/custom.css">
+  <link rel="stylesheet" href="./style/custom-componentes.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row">          
+        <div class="col">
+
+          <h1><img src="./images/Dental Tanaka.png"></h1>
+
+        </div>
+
+        <div class="col">
+          <ul class="nav justify-content-end">
+            <li class="nav-item"><a class="nav-link active" href="./layout bootstrap.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="./cadastro.html">Login / Cadastro</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+
+            <div class="ratio ratio-21x9"> <!-- "ratio" - são helpers, usados para incrementa, ajustar, utilização de cores, etc... -->
+              <img src="./images/Perfil.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-caption"> <!-- "Legenda dentro do carousel" -->
+              <h4>Lorem ipsum</h4>
+              <a class="btn btn-link">Call to ation</a> <!-- botão clicavel no slide, somente no botão -->
+            </div> 
+
+          </div>
+
+          <div class="carousel-item">
+
+            <div class="ratio ratio-21x9">
+              <img src="./images/Dental Tanaka - Perfil.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="carousel-caption"> <!-- "Legenda dentro do carousel" -->
+              <h4>Lorem ipsum</h4>
+              <a class="btn btn-light stretched-link">Call to ation</a> 
+            </div>
+
+            <!-- "btn btn-link stretched-link" - torna toda a area do conteudo clicavel, ou seja na legenda -->
+            <!-- Colocando a classe descrita acima fora do "carousel-item", todo o conteudo do link se torna clicavel direcionando o usuario -->
+            <!-- "text-truncate" - caso o texto seja grande, ele formata o texto dentro do slide. Lembrando que precisa formatar a largura usando "col" -->
+
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- "clearfix" é um helper, faz a mesma função que o "br" causa uma quebra de linha--><!--"bg-info"-->
+  <!-- "bs5" - Atalho do bootstrap, onde tem opções para facilitar a programação -->
+  <!-- 
+    "btn ...float-start" - alinha no começo 
+    "btn ...float-end" - alinha no final
+    "fixed-top" - fixa o link ou botao no topo da página
+  -->
+  <!-- Em vez de utilizar  "btn btn-link", posso usar a utlização direta "btn link-danger (exemplo)" -->
+
+
+  <div class="container">
+    <div class="bg-info clearfix"> 
+      <a name="" id="" class="btn btn-link" href="#" role="button">link</a> 
+
+      <a name="" id="" class="btn link-danger float-end" href="#" role="button">Button</a>
+    </div>
+  </div>
+
+  <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>   
+    const myCarousel = document.querySelector('#carouselExampleFade') // O nome do identificador tem que ser identico ao 'id'
+      const carousel = new bootstrap.Carousel(myCarousel, {
+        pause: false,
+        interval: 3000
+      })
+  </script>
+
+</body>
+</html>
