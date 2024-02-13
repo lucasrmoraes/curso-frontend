@@ -23,13 +23,62 @@
                         <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="./cadastro.html">Login / Cadastro</a></li>
 
                     </ul>
                 </div>
+            </div>
         </div>
     </header>
+
+    <section>
+        <div class="container">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+        
+                    <div class="carousel-item active">
+            
+                        <div class="ratio ratio-21x9"> <!-- "ratio" - são helpers, usados para incrementa, ajustar, utilização de cores, etc... -->
+                        <img src="./images/Perfil.png" class="d-block w-100" alt="...">
+                        </div>
+            
+                    </div>
+            
+                    <div class="carousel-item">
+            
+                        <div class="ratio ratio-21x9">
+                            <img src="./images/Dental Tanaka - Perfil.png" class="d-block w-100" alt="...">
+                        </div>
+            
+                        <!-- "btn btn-link stretched-link" - torna toda a area do conteudo clicavel, ou seja na legenda -->
+                        <!-- Colocando a classe descrita acima fora do "carousel-item", todo o conteudo do link se torna clicavel direcionando o usuario -->
+                        <!-- "text-truncate" - caso o texto seja grande, ele formata o texto dentro do slide. Lembrando que precisa formatar a largura usando "col" -->
+            
+                    </div>
+            
+                </div>
+        
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+        
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                
+            </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="bg-info clearfix">
+            <i class="fa-brands fa-facebook"></i> <!-- Trabalhando com icones, através do font awesome -->
+            <a class="nav-link" href="https://www.instagram.com/dentaltanakaoficial/"><i class="fa-brands fa-instagram"></a></i>
+        </div>
+      </div>
     
     <section id="sobre">
 
@@ -124,41 +173,6 @@
                     </div>
 
                 </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section id="contato">
-        <div class="container">
-            <div class="row">
-                
-                <div class="col-md-6 col-sm-12">
-                    <h2>Contato</h2>
-                    <p>Ficou interessado? Preencha os campos do formulário para receber uma cotação.</p>
-                </div>
-
-                <div class="col-md-6 col-sm-12">
-                    <div class="form">
-
-                        <div class="input-group"> <!-- form-control = estilo a pagina-->
-                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
-                        </div>
-
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="email" placeholder="digite seu email">
-                        </div>
-
-                        <div class="input-group">
-                            <textarea class="form-control" name=""  rows="4"></textarea>
-                        </div>
-
-                        <button type="submit" class="bt btn-lg btn-success">Solicitar Cotação</button>
-
-
-                    </div>
-                </div>
-
             </div>
         </div>
 
@@ -364,6 +378,14 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por Lucas Moraes</p>      
+        </div>
+    </footer>
+
     <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d184676cac.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

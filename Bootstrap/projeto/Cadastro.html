@@ -22,12 +22,11 @@
                 <div class="col">
                     <ul class="nav justify-content-end">
                         <li class="nav-item"><a class="nav-link active" href="./layout bootstrap.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="./cadastro.html">Login / Cadastro</a></li>
                     </ul>
                 </div>
+            </div>
         </div>
     </header>
 
@@ -42,7 +41,7 @@
 
                 <form class="form"><!-- form - fica com uma area mais otimizada para o formulário-->
 
-                    <div class="row">
+                    <div class="row"> <!-- Dados iniciais -->
 
                         <div class="col">
                             <label for="nome completo" class="col-form-label-sm">Nome Completo</label>
@@ -51,16 +50,28 @@
                             
                         <div class="col">
                             <label for="email" class="col-form-label-sm">E-mail</label>
-                            <input type="text" class="form-control" placeholder="Digite seu email">
+                            <input type="text" name="email" class="form-control" placeholder="Digite seu email">
                         </div>
 
                     </div>
 
-                    <div class="row">
+                    <div class="row"> <!-- Contato -->
+                        
                         <div class="col">
-                            <label for="cro" class="col-form-label-sm">CRO</label>
-                            <input type="text" name="cro" id="cro" class="form-control" placeholder="Digite o numero do CRO" required>
+                            <label for="telefone" class="col-form-label-sm">Telefone</label>
+                            <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Telefone Fixo">
                         </div>
+
+                        <div class="col">
+                            <label for="celular" class="col-form-label-sm">Celular</label>
+                            <input type="text" name="celular" id="celular" class="form-control" placeholder="Celular" required>
+                        </div>
+
+                        <div class="col">
+                            <label for="cro" class="col-form-label-sm">CRO</label> <!-- Número documento para exercer profissão Dentista, Protético, Ortodontista, etc... -->
+                            <input type="text" name="cro" id="cro" class="form-control" placeholder="Digite seu CRO" required> 
+                        </div>
+
                     </div>
 
                     <div class="row"><!--Endereço -->
@@ -69,19 +80,29 @@
                             <label for="endereço" class="col-form-label-sm">Endereço</label> <!-- Função 'label' quando clicar no campo ele da o foco -->
                             <input type="text" name="endereço" id="endereço" class="form-control" placeholder="Digite seu endereço" required><!-- Atalho "input.form-control" -->
                         </div>
+
+                        <div class="col">
+                            <label for="complemento" class="col-form-label-sm">Complemento</label>
+                            <input type="text" name="complemento" id="complemento" class="form-control">
+                        </div>
                         
                     </div>
 
-                    <div class="row"><!-- Cidade / Estado -->
+                    <div class="row"><!-- Bairro / Cidade / Estado -->
 
                         <div class="col">
-                            <label for="cidade" class="col-form-label-sm">Cidade</label>
-                            <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Digite sua Cidade">
+                            <label for="bairro" class="col-form-label-sm">Bairro</label>
+                            <input type="text" name="bairro" id="bairro" class="form-control" placeholder="Bairro">
                         </div>
 
                         <div class="col">
+                            <label for="cidade" class="col-form-label-sm">Cidade</label>
+                            <input type="text" name="cidade" id="cidade" class="form-control" placeholder="Cidade" required>
+                        </div>
+
+                        <div class="col">   
                             <label for="estado" class="col-form-label-sm">Estado</label>
-                            <select name="estado" id="estado" class="form-control">                                
+                            <select name="estado" id="estado" class="form-control" required>                                
                                 <option value="">Selecione um Estado</option>
                                 <option value="sp">SP</option>
                                 <option value="rj">RJ</option>
@@ -93,6 +114,20 @@
                             <label for="cep" class="col-form-label-sm">Cep</label><!-- 'for' faz referencia ao 'id' -->
                             <input type="text" name="cep" id="cep" class="form-control" required>
                         </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col">
+                            <label for="senha" class="col-form-label-sm">Senha</label>
+                            <input type="text" class="form-control" placeholder="Digite uma senha para seu login" required>
+                        </div>
+
+                        <div class="col">
+                            <label for="confirmar senha" class="col-form-label-sm">Confirme a senha</label>
+                            <input type="text" class="form-control" placeholder="Digite novamente" required>
+                        </div>
+
                     </div>
 
                     <!-- Sempre colocar class="form-control" ele que da o estilo de formulário -->
@@ -117,11 +152,11 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-lg btn-success">Realizar Cadastro</button>
+                    <button type="submit" class="btn btn-lg btn-success">Realizar Cadastro</button><br>
 
                 </form> <!-- end class form -->
 
-                <p><a href="#cadastro" data-bs-toggle="modal" data-bs-target="#modal-4">Cadastre-se</a> para receber novidades</p>
+                <p>Já possui cadastro? Faça seu <a href="#login" data-bs-toggle="modal" data-bs-target="#modal-4">Login</a> aqui.</p>
                 
 
             </div><!-- end class row -->
@@ -134,27 +169,29 @@
             <div class="modal-content">
 
                 <div class="modal-header"> <!-- Cabeçalho - (data-ds-dismiss - o BootStrap entende que deve fechar o modal) -->
-                    <h5 class="modal-title">Inscrever-me na lista</h5>
+                    <h5 class="modal-title">Faça seu Login</h5>
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <div class="modal-body"><!-- Corpo -->
-                       <h6>Preencha os campos para receber novidades e promoções</h6>
+                       <h6>Preencha os campos a seguir</h6>
 
                        <form class="form-inline">
 
                             <div class="form-group col-8">
-                                <input type="text" class="form-control form-control-sm mb-2" name="nome" placeholder="nome">
-                            </div>
-                            <div class="form-group col-8">
                                 <input type="text" class="form-control form-control-sm mb-2" name="e-mail" placeholder="e-mail" required> <!-- required - se torna um capo obrigatório -->
                             </div>
+
+                             <div class="form-group col-8">
+                                <input type="text" class="form-control form-control-sm mb-2" name="senha" placeholder="senha" required>
+                            </div>
+
                             <div class="form-group col-6">
-                                <button type="submit" class="btn btn-success">Receber Novidades</button>
+                                <button type="submit" class="btn btn-success">Acessar</button>
 
                             </div>
                        </form>
-                </div>
+                </div> <!-- end class modal-body -->
             
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary mb-2" data-bs-dismiss="modal" class="form-control-sm">Fechar</button>
@@ -164,6 +201,12 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por Lucas Moraes</p>           
+        </div>
+    </footer>
+    
     <script src="./libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
