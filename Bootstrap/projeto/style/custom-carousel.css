@@ -1,0 +1,8 @@
+#carouselExampleFade {
+    padding: 0;
+    margin-left: 12.5%;
+    width: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
