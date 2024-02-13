@@ -1,7 +1,12 @@
 #localizacao{
     width: 100%;
+    display: block;
 }
 
-.maps{
-    margin-bottom: .80rem;
+.bg-info{
+    background-color: #d2d3d4 !important;
+}
+
+#rede-social{
+    margin-bottom: 1rem;
 }
