@@ -4,6 +4,7 @@ jQuery(function($){
 
     let titulos = $('h4') // tag
     let itens = $('.featured-item') // class
-    $('#featured') // id
+    let destaques = $('#featured') // id
     
+    console.log(titulos.first()); //trabalhando desta forma evita conflitos, caso esteja trabalhando com varias bibliotecas.
 })
