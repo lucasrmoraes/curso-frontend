@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     // Configuração de produtos
 
-    // $('.featured-item a').addClass('btn btn-dark strech-link');
+     $('.featured-item a').addClass('btn btn-dark strech-link');
     // $('.featured-item:first h4').star('<span class="badge bg-secondary">Novo</span>')
     // $('.featured-item:first h4').html('<span class="badge bg-secondary">Novo</span>')
     // $('.featured-item:first h4').addClass('active')

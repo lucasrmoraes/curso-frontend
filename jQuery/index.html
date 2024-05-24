@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./verton/css/style.css">
     <title>jQuery</title>
 </head>
+
 <body>
     <!-- Navegação -->
 
@@ -23,13 +24,27 @@
 
                     <a class="nav-link" href="#">Home</a>
                     <a class="nav-link" href="#">Produtos</a>
-                    <a class="nav-link" href="#">Sobre Nós</a>
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link nav-modal-open" href="#">Sobre Nós</a>
+                    <a class="nav-link nav-modal-open" href="#">Contato</a>
                     
                 </div>
             </div>
         </div>       
     </nav>
+
+    <div class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="caption">
+                        <h2>Nova coleção</h2>
+                        <div class="line-dec"></div>
+                        <p>Confira os novos itens da nossa nova coleção de roupas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Listagem de produtos (e-commerce) -->
     
@@ -48,7 +63,7 @@
                         
                         <div class="featured-item">
                             <img src="./verton/images/Hamburguer Gourmer.png" alt="Item 1">
-                            <h4>Hamburguer Gourmet</h4>
+                            <h4>Burguer Gourmet</h4>
                             <h6>R$ 55,00</h6>
                             <a href="single-product.html">Comprar</a>
                         </div>
@@ -61,42 +76,28 @@
                         </div>
                         
                         <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 3">
-                            <h4>Burguer Simples</h4>
-                            <h6>R$ 25,00</h6>
+                            <img src="./verton/images/Hamburguer 3.png" alt="Item 3">
+                            <h4>Burguer Duplo</h4>
+                            <h6>R$ 34,00</h6>
                             <a href="single-product.html">Comprar</a>
                         </div>
 
                         <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 4">
-                            <h4>Burguer Simples</h4>
-                            <h6>R$ 25,00</h6>
+                            <img src="./verton/images/Hamburguer 4.png" alt="Item 4">
+                            <h4>Burguer Churrasco</h4>
+                            <h6>R$ 42,00</h6>
                             <a href="single-product.html">Comprar</a>
                         </div>
 
                         <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 5">
-                            <h4>Burguer Simples</h4>
-                            <h6>R$ 25,00</h6>
+                            <img src="./verton/images/Hamburguer 5.png" alt="Item 5">
+                            <h4>Burguer Frango</h4>
+                            <h6>R$ 30,00</h6>
                             <a href="single-product.html">Comprar</a>
                         </div>
                         
                         <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 6">
-                            <h4>Burguer Simples</h4>
-                            <h6>R$ 25,00</h6>
-                            <a href="single-product.html">Comprar</a>
-                        </div>
-
-                        <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 7">
-                            <h4>Burguer Simples</h4>
-                            <h6>R$ 25,00</h6>
-                            <a href="single-product.html">Comprar</a>
-                        </div>
-
-                        <div class="featured-item">
-                            <img src="./verton/images/Hamburguer 2.png" alt="Item 8">
+                            <img src="./verton/images/Hamburguer 6.png" alt="Item 6">
                             <h4>Burguer Simples</h4>
                             <h6>R$ 25,00</h6>
                             <a href="single-product.html">Comprar</a>
@@ -104,12 +105,91 @@
                         
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="subscribe-form">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>Receba novidades</h1>
+                    </div>
+                </div>
+
+                <div class="col-md-8 offset-md-2">
+                    <div class="main-content">
+                        <p>Insira seus dados abaixo para receber informações atualizadas de nossos produtos</p>
+                        <div class="container">
+                            <form id="subscribe" class="form" action="" method="get">
+                                <div class="row">
+
+                                    <div class="col-md-7">
+                                        <fieldset>
+                                            <input name="email" type="text" class="form-control" id="email" value=""
+                                                placeholder="Seu e-mail...">
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <fieldset>
+                                            <button type="submit" id="form-submit" class="button">Inscreva-se</button>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo">
+                        <img src="./verton/images/Logo - Hamburgueria.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#top">Home</a></li>
+                            <li><a href="#produtos">Produtos</a></li>
+                            <li><a href="#sobre" rel="sobre" class="nav-modal-open">Sobre</a></li>
+                            <li><a href="#contato" rel="contato" class="nav-modal-open">Contato</a></li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Rodapé -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="icons">
+
+                    <ul>
+                        <li><a class="#" href=""><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                        <li><a class="#" href=""><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                        <li><a class="#" href=""><i class="fa-brands fa-twitter fa-lg"></i></a></li>
+                    </ul>
+
+                </div>                  
+            </div>
+        </div>
+    </div>
 
     <!-- Barra final Página -->
 
@@ -129,6 +209,7 @@
     <script src="./verton/bootstrap/js/bootstrap.min.js"></script>
     <script src="./verton/owl-carousel/owl.carousel.js"></script>
     <script src="./verton/js/custom.js"></script>
+    <script src="https://kit.fontawesome.com/d184676cac.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
