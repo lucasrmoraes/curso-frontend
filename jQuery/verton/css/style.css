@@ -112,13 +112,14 @@ a {
 	font-family: 'FontAwesome';
 }
 
-/* Banner Style */
+/* Banner Style*/
+
 .banner {
-	margin-top: 50px;
-	background-image: url(../images/Hamburguer\ 2.png);
+	margin-top: 55px;
+	background-image: url(../images/Banner.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	padding: 150px 0px;
+	padding: 155px 0px;
 	background-position: center center;
 }
 .banner .caption {
@@ -143,7 +144,8 @@ a {
 	margin-bottom: 20px;
 }
 
-/* Featured Style */
+/* Featured Style  - Imagens */
+
 .featured-items {
 	margin-bottom: 70px;
 }
@@ -195,10 +197,11 @@ a {
 }
 
 
-/* Subscribe Style */
+/* Subscribe Style  - Formulário */
+
 .subscribe-form {
 	background-color: #ff4901;
-	padding: 80px 0px;
+	padding: 40px 0px;
 	text-align: center;
 }
 .subscribe-form .section-heading  {
@@ -227,7 +230,7 @@ a {
 	width: 100%;
 	height: 46px;
 	border: 1px solid #fff;
-	background-color: transparent;
+	background-color: #fff;
 	padding-left: 15px;
 	color: #fff;
 	outline: none;
@@ -256,7 +259,8 @@ a {
 }
 
 
-/* Footer Style */
+/* Footer Style  - Rodapé e Icones*/
+
 .footer {
 	text-align: center;
 }
@@ -270,8 +274,8 @@ a {
 }
 .footer .logo img {
 	max-width: 100%;
-	margin-top: 60px;
-	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 .footer .footer-menu {
 	margin-bottom: 40px;
@@ -290,7 +294,7 @@ a {
 	text-decoration: none;
 }
 .footer .social-icons {
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 }
 .footer .social-icons ul li {
 	margin: 0px 10px;
@@ -369,7 +373,8 @@ a {
 
 /* Isotope Transitions
 ------------------------------- */
-/*.isotope,
+
+.isotope,
 .isotope .item {
   -webkit-transition-duration: 0.8s;
      -moz-transition-duration: 0.8s;
@@ -427,7 +432,7 @@ a {
 
 
 /* Single Product Style */
-/*
+
 .single-product .product-slider {
 	padding: 20px;
 	border: 1px solid #eee!important;
@@ -548,7 +553,7 @@ a {
 
 
 /* About Us Style */
-/*
+
 .about-page {
 	margin-top: 50px;
     margin-bottom: 80px;
@@ -597,7 +602,7 @@ a {
 
 
 /* Contact Page Style */
-/*
+
 .contact-page {
 	margin-top: 50px;
     margin-bottom: 80px;
@@ -664,7 +669,7 @@ a {
 	transition: all 0.5s;
 	box-shadow: none;
 	border: none;
-} */
+}
 
 /* Responsive Style */
 @media (max-width: 991px) {
