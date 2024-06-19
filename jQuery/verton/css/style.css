@@ -36,7 +36,7 @@ a {
 	opacity: 0.7;
 }
 .section-heading {
-	margin-top: 80px;
+	margin-top: 60px;
 	margin-bottom: 40px;
 }
 .section-heading .line-dec {
@@ -52,6 +52,7 @@ a {
 }
 
 /* Header Style */
+
 .navbar .navbar-brand {
 	text-align: center;
 	width: 100%;
@@ -66,7 +67,6 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 50%;
-	top: 128px;
 	transform: translateX(-50%);
 }
 .navbar-dark .navbar-nav .nav-item {
@@ -151,8 +151,8 @@ a {
 }
 .featured-item {
 	border-radius: 5px;
-	border: 1px solid #eee;
-	padding: 20px;
+	border: 1px solid #0d6efd;
+	padding: 15px;
 	transition: all 0.5s;
 }
 .featured-item:hover {
@@ -203,6 +203,7 @@ a {
 	background-color: #ff4901;
 	padding: 40px 0px;
 	text-align: center;
+	margin-top: 2rem;
 }
 .subscribe-form .section-heading  {
 	margin-top: 0px;
@@ -232,7 +233,7 @@ a {
 	border: 1px solid #fff;
 	background-color: #fff;
 	padding-left: 15px;
-	color: #fff;
+	color: #000000;
 	outline: none;
 }
 .subscribe-form .main-content form button:focus {

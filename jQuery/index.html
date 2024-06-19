@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./verton/bootstrap/css/bootstrap.min.css"> <!-- Biblioteca BootStrap -->
     <link rel="stylesheet" href="./verton/owl-carousel/owl.carousel.css"> <!-- Biblioteca Owl -->
     <link rel="stylesheet" href="./verton/css/style.css">
-    <title>jQuery</title>
+    <title>Hamburgueria Ghost Field</title>
 </head>
 
 <body>
@@ -15,19 +15,31 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <img src="./verton/images/Logo - Hamburgueria.jpg"> <!-- Logo -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="toggle navigation">
+            <span class="navbar navbar-brand"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">Produtos</a>
-                    <a class="nav-link nav-modal-open" href="#">Sobre Nós</a>
-                    <a class="nav-link nav-modal-open" href="#">Contato</a>
-                    
-                </div>
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produtos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-modal-open" href="#" rel="sobre">Sobre Nós</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-modal-open" href="#" rel="contato">Contato</a>
+                    </li>
+                </ul>
+
             </div>
         </div>       
     </nav>
@@ -129,8 +141,7 @@
 
                                     <div class="col-md-7">
                                         <fieldset>
-                                            <input name="email" type="text" class="form-control" id="email" value=""
-                                                placeholder="Seu e-mail...">
+                                            <input name="email" type="text" class="form-control" id="email" placeholder="Seu e-mail...">
                                         </fieldset>
                                     </div>
 
@@ -139,11 +150,13 @@
                                             <button type="submit" id="form-submit" class="button">Inscreva-se</button>
                                         </fieldset>
                                     </div>
+                                    
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -189,11 +202,49 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="copyright-text">
-                        <p>Hamburgueria Ghost Field &copy; Todos os direitos reservados
+                        <p>Hamburgueria Ghost Field &copy; Todos os direitos reservados</p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Modal button -->
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">Launch</button>
+    
+    <!-- Modal Body -->
+    <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body"></div>
+                    
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="contato" class="visually-hidden"> <!--visually-hidden - oculta o formulario na página -->
+        <form action="" class="form">
+
+            <div class="mb-3">
+                <label for="" class="form-label">Nome</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome"/>
+                <small id="helpNome" class="text-muted">Digite um nome válido</small>
+            </div>
+            
+
+        </form>
     </div>
     
     <script src="./verton/js/jquery-3.7.1.min.js"></script>
