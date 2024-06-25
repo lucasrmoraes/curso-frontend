@@ -53,7 +53,7 @@ Lógica é aquilo que faz sentido
 
 1. Inicio;
 2. Receber o primeiro número: entrada 1;
-3. Receber o segundo número: esntrada 2;
+3. Receber o segundo número: entrada 2;
 4. Receber o terceiro número: entrada 3;
 5. Processamneto: Somar os 3 números recebidos e dividir por três: (entrada 1 + entrada 2 + entrada 3) / 3;
 6. Exibir o resultado: print, echo, console.log;

@@ -24,7 +24,7 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="./index.html">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -208,16 +208,13 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal button -->
-    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">Launch</button>
     
     <!-- Modal Body -->
     <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title">Contato</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -225,31 +222,66 @@
                     
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
-                </div>
-
             </div>
         </div>
     </div>
 
     <div id="contato" class="visually-hidden"> <!--visually-hidden - oculta o formulario na página -->
-        <form action="" class="form">
+        <form action="post" class="form">
 
             <div class="mb-3">
                 <label for="" class="form-label">Nome</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome"/>
-                <small id="helpNome" class="text-muted">Digite um nome válido</small>
+                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite Nome Completo" aria-describedby="helpNome"/>
+                <small id="helpNome" class="text-muted">Insira seu Nome</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu Email" aria-describedby="helpEmail"/>
+                <small id="helpEmail" class="text-muted">Insira seu Email</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Celular</label>
+                <input type="text" name="celular" id="celular" class="form-control" placeholder="Digite o Celular" aria-describedby="helpCelular"/>
+                <small id="helpCelular" class="text-muted">Digite seu numero</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o CPF" aria-describedby="helpCPF"/>
+                <small id="helpCPF" class="text-muted">Digite seu CPF</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Endereço</label>
+                <input type="text" name="endereço" id="endereço" class="form-control" placeholder="Digite o Endereço" aria-describedby="helpEndereço"/>
+                <small id="helpEndereço" class="text-muted">Insira seu Endereço</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label">Cep</label>
+                <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu Cep" aria-describedby="helpCep"/>
+                <small id="helpCep" class="text-muted">Digite Cep</small>
             </div>
             
-
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            
         </form>
     </div>
+
+    <div id="sobre" class="visually-hidden">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, voluptatibus. Reiciendis in ut nulla exercitationem provident sunt praesentium quo voluptates rerum nobis ipsam natus repellendus nisi, unde fuga, consequatur odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus dolore commodi velit totam suscipit temporibus autem rem sint ab. Impedit accusantium vitae tenetur qui dolore esse optio et consequatur!</p>
+    </div>
+
     
     <script src="./verton/js/jquery-3.7.1.min.js"></script>
     <script src="./verton/bootstrap/js/bootstrap.min.js"></script>
     <script src="./verton/owl-carousel/owl.carousel.js"></script>
+    <script src="./verton/jQuery-mask/jquery.mask.min.js"></script>
+    <script src="./verton/jQuery-IU/jquery-ui.min.js"></script>
     <script src="./verton/js/custom.js"></script>
     <script src="https://kit.fontawesome.com/d184676cac.js" crossorigin="anonymous"></script>
     
