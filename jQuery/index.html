@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./verton/bootstrap/css/bootstrap.min.css"> <!-- Biblioteca BootStrap -->
     <link rel="stylesheet" href="./verton/owl-carousel/owl.carousel.css"> <!-- Biblioteca Owl -->
+    <link rel="stylesheet" href="./verton/jQuery-IU/jquery-ui.css"><!-- Biblioteca jQuery IU -->
     <link rel="stylesheet" href="./verton/css/style.css">
     <title>Hamburgueria Ghost Field</title>
 </head>
@@ -231,26 +232,26 @@
 
             <div class="mb-3">
                 <label for="" class="form-label">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite Nome Completo" aria-describedby="helpNome"/>
-                <small id="helpNome" class="text-muted">Insira seu Nome</small>
+                <input type="text" name="nome" id="nome" class="form-control required" placeholder="Digite Nome Completo" aria-describedby="helpNome"/>
+                <small id="helpNome" class="text-muted">Digite no minimo 4 caracteres</small>
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
-                <input type="text" name="email" id="email" class="form-control" placeholder="Digite seu Email" aria-describedby="helpEmail"/>
+                <input type="text" name="email" id="email" class="form-control required" placeholder="Digite seu Email" aria-describedby="helpEmail"/>
                 <small id="helpEmail" class="text-muted">Insira seu Email</small>
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">Celular</label>
-                <input type="text" name="celular" id="celular" class="form-control" placeholder="Digite o Celular" aria-describedby="helpCelular"/>
+                <input type="text" name="celular" id="celular" class="form-control required" placeholder="Digite o Celular" aria-describedby="helpCelular"/>
                 <small id="helpCelular" class="text-muted">Digite seu numero</small>
             </div>
 
             <div class="mb-3">
                 <label for="" class="form-label">CPF</label>
-                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite o CPF" aria-describedby="helpCPF"/>
-                <small id="helpCPF" class="text-muted">Digite seu CPF</small>
+                <input type="text" name="cpf" id="cpf" class="form-control required" placeholder="Digite o CPF" aria-describedby="helpCPF">
+                <small id="helpCPF" class="text-muted">Digite seu CPF (Somente numeros)</small>
             </div>
 
             <div class="mb-3">
