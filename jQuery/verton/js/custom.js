@@ -103,12 +103,10 @@ $(document).ready(function(){
 
    })
 
-   /*
-   *Validação formuário
-   */
+   // Formulário
 
    $('body').on('submit', 'modal-body .form', function(e){
-      e.preventDefatult() //Impede que nosso formulário seja enviado vazio
+      e.preventDefatult();//preventDefalt - Impede que nosso formulário seja enviado vazio
       
       const inputName = $('#nome').val()
       const inputEmail = $('#email').val()
@@ -126,27 +124,98 @@ $(document).ready(function(){
 
    })
 
-   function validate(elem){
-      if(elem.val() == ''){
-         console.log('o campo de ' + elem.attr("name") + ' é obrigatório') // Demonstra ao usuário campo é obrigatório
+   // Validação Formulário - RegEx
+   
+   const nameregex = /[a-zA-Z]{4}/;
+   const emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z]+.[a-zA-Z]{3}$/;
+   const cpfregex = /(^\d{3}.\d{3}.\d{3}-\d{2}$)/;
+
+   // Validação Nome
+
+   function validateName(elem){
+
+      if(!nameregex.test(elem.val())){
+
+         console.log('o campo nome não está válido') // Demonstra ao usuário campo é obrigatório        
          elem.parent().find('.text-muted').show() // Mostra qual campo é obrigatório
          elem.addClass('invalid') // Criando classe invalido caso o campo seja preenchido errado
-
+         
          return false
 
-      } else{
+      }else{
+  
          elem.parent().find('.text-muted').hide() // Remove a função caso esteja preenchido corretamente
          elem.removeClass('invalid')
+         console.log('o campo nome é válido')
       }
    }
 
+   //Validação E-mail
+
+   function validateEmail(elem){
+
+      if(!emailregex.test(elem.val())){
+
+         console.log('o campo email não está válido') // Demonstra ao usuário campo é obrigatório        
+         elem.parent().find('.text-muted').show() // Mostra qual campo é obrigatório
+         elem.addClass('invalid') // Criando classe invalido caso o campo seja preenchido errado
+         
+         return false
+
+      }else{
+  
+         elem.parent().find('.text-muted').hide() // Remove a função caso esteja preenchido corretamente
+         elem.removeClass('invalid')
+         console.log('o campo email é válido')
+      }
+   }
+
+   //Validação CPF
+
+   function validateCPF(elem){
+
+      if(!cpfregex.test(elem.val())){
+
+         console.log('o campo cpf não está válido') // Demonstra ao usuário campo é obrigatório        
+         elem.parent().find('.text-muted').show() // Mostra qual campo é obrigatório
+         elem.addClass('invalid') // Criando classe invalido caso o campo seja preenchido errado
+         
+         return false
+
+      }else{
+  
+         elem.parent().find('.text-muted').hide() // Remove a função caso esteja preenchido corretamente
+         elem.removeClass('invalid')
+         console.log('o campo cpf é válido')
+      }
+   }
+
+   // Validação campo Vazio
+
+   function validate(elem){
+      if(elem.val() == ''){
+  
+         console.log('o campo de ' + elem.attr("name") + ' é obrigatório') // Demonstra ao usuário campo é obrigatório        
+         elem.parent().find('.text-muted').show() // Mostra qual campo é obrigatório
+         elem.addClass('invalid') // Criando classe invalido caso o campo seja preenchido errado
+         
+         return false
+  
+      } else{
+  
+         elem.parent().find('.text-muted').hide() // Remove a função caso esteja preenchido corretamente
+         elem.removeClass('invalid')
+  
+      }
+   } 
+
 
    $('body').on('blur', '#nome', function () {
-      validate($(this))
+      validateName($(this))
    })
 
    $('body').on('blur', '#email', function () {
-      validate($(this))
+      validateEmail($(this))
    })
 
    $('body').on('keyup', '#celular', function () {
@@ -155,7 +224,7 @@ $(document).ready(function(){
    })
 
    $('body').on('keyup', '#cpf', function () {
-      validate($(this))
+      validateCPF($(this))
       $(this).mask('000.000.000-00');
    })
 
